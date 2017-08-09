@@ -7,18 +7,41 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference {
 
     var window: UIWindow?
-
-
+    var ref: DatabaseReference!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        let tabBarController = self.window!.rootViewController as! UITabBarController
+        let splitViewController = tabBarController.viewControllers?[3] as! UISplitViewController
+        let leftNavigationController = splitViewController.viewControllers.first as! UINavigationController
+        let masterViewController = leftNavigationController.topViewController as! MasterViewController
+        let detailCollectionViewController = splitViewController.viewControllers.last as! DetailCollectionViewController
+        
+        masterViewController.delegate = detailCollectionViewController
+        
+        downloadMenu()
         
         return true
     }
+    
+    func downloadMenu(){
+        var menu = Menu()
+        ref.child("MenuCategories").observe(.value, with: { snapshot in
+            for (index, child) in snapshot.children.enumerated() {
+                menu.menuCategories[index+1] = (Menu.Category.init(snapshot: child as! DataSnapshot))
+                print(menu.menuCategories[index+1]?.name ?? "doh")
+            }
+        })
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

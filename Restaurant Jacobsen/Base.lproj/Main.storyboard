@@ -86,7 +86,7 @@
         <!--Menukort-->
         <scene sceneID="9LV-fx-Dsw">
             <objects>
-                <splitViewController id="Bih-Jr-n2U" sceneMemberID="viewController">
+                <splitViewController id="Bih-Jr-n2U" customClass="MenuSplitViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menukort" id="oCa-zi-5r6"/>
                     <connections>
                         <segue destination="4br-Vt-jrR" kind="relationship" relationship="masterViewController" id="0rZ-YQ-4Zu"/>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="2326" y="328"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Detail Collection View Controller-->
         <scene sceneID="lL5-Rb-FAC">
             <objects>
-                <collectionViewController id="dpP-Kx-qWA" sceneMemberID="viewController">
+                <collectionViewController id="dpP-Kx-qWA" customClass="DetailCollectionViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4uw-oV-HGe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,14 +112,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="RvC-C6-8aI">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuItemCell" id="RvC-C6-8aI" customClass="MenuItemCell" customModule="Restaurant_Jacobsen" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aix-eZ-0hM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aix-eZ-0hM" userLabel="Husets platte  Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost">
                                             <rect key="frame" x="38" y="6" width="273" height="77"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
@@ -149,7 +149,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQJ-N7-T5r">
-                                            <rect key="frame" x="1" y="3" width="40" height="32"/>
+                                            <rect key="frame" x="1" y="3" width="50" height="32"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="A1.">
                                                     <attributes>
@@ -164,7 +164,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="aix-eZ-0hM" secondAttribute="bottom" constant="5" id="0Gp-fB-MuY"/>
-                                    <constraint firstItem="GQJ-N7-T5r" firstAttribute="centerX" secondItem="RvC-C6-8aI" secondAttribute="centerX" constant="-166.5" id="GxV-4B-U14"/>
+                                    <constraint firstItem="GQJ-N7-T5r" firstAttribute="centerX" secondItem="RvC-C6-8aI" secondAttribute="centerX" constant="-161.5" id="GxV-4B-U14"/>
                                     <constraint firstItem="GQJ-N7-T5r" firstAttribute="centerY" secondItem="RvC-C6-8aI" secondAttribute="centerY" constant="-25.5" id="Sxw-Ff-Hsr"/>
                                     <constraint firstItem="y3F-k6-cf1" firstAttribute="top" secondItem="RvC-C6-8aI" secondAttribute="topMargin" id="UQv-7y-8f8"/>
                                     <constraint firstItem="aix-eZ-0hM" firstAttribute="leading" secondItem="RvC-C6-8aI" secondAttribute="leading" constant="38" id="WKN-17-BWr"/>
@@ -175,9 +175,14 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                     <constraint firstAttribute="trailing" secondItem="y3F-k6-cf1" secondAttribute="trailing" id="xKV-Ah-5MQ"/>
                                     <constraint firstItem="aix-eZ-0hM" firstAttribute="top" secondItem="RvC-C6-8aI" secondAttribute="top" constant="6" id="yCz-gJ-8sT"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="number" destination="GQJ-N7-T5r" id="9Xx-qQ-PpG"/>
+                                    <outlet property="price" destination="y3F-k6-cf1" id="PFo-ri-58l"/>
+                                    <outlet property="text" destination="aix-eZ-0hM" id="q0C-Qs-5el"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuHeader" id="uTz-mO-k0c">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuHeader" id="uTz-mO-k0c" customClass="MenuHeaderReusableView" customModule="Restaurant_Jacobsen" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -201,6 +206,9 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                 <constraint firstItem="vzZ-VM-vDT" firstAttribute="centerX" secondItem="uTz-mO-k0c" secondAttribute="centerX" constant="-13" id="S7y-kQ-Blr"/>
                                 <constraint firstItem="vzZ-VM-vDT" firstAttribute="centerX" secondItem="uTz-mO-k0c" secondAttribute="centerX" constant="-13" id="fcJ-jL-lRX"/>
                             </constraints>
+                            <connections>
+                                <outlet property="title" destination="vzZ-VM-vDT" id="EU6-V1-66D"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="dpP-Kx-qWA" id="u3g-DW-bnI"/>

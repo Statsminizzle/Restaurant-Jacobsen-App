@@ -1,0 +1,6 @@
+framework module Pods_Restaurant_Jacobsen {
+  umbrella header "Pods-Restaurant Jacobsen-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20202D370439868CF1B58BDC /* Pods_Restaurant_JacobsenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88728CCC05538AC46117A5 /* Pods_Restaurant_JacobsenTests.framework */; };
 		25317C981F1DDBF600C549E1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25317C971F1DDBF600C549E1 /* MasterViewController.swift */; };
-		25317C9A1F1DDDBD00C549E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25317C991F1DDDBD00C549E1 /* DetailViewController.swift */; };
+		256397B11F324B84000E1D04 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B01F324B84000E1D04 /* MenuItemCell.swift */; };
+		256397B51F325B02000E1D04 /* MenuHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */; };
+		256397B71F328163000E1D04 /* MenuSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B61F328163000E1D04 /* MenuSplitViewController.swift */; };
+		256397B91F33C460000E1D04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256397B81F33C460000E1D04 /* GoogleService-Info.plist */; };
+		256397BA1F33C460000E1D04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256397B81F33C460000E1D04 /* GoogleService-Info.plist */; };
+		256397BB1F33C460000E1D04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256397B81F33C460000E1D04 /* GoogleService-Info.plist */; };
+		256397BD1F357BFB000E1D04 /* FirebaseDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */; };
+		256397BF1F36C447000E1D04 /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397BE1F36C447000E1D04 /* AtomicInteger.swift */; };
+		25659A631F26D25A005CCB0B /* DetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */; };
 		25738B8A1F1F655B00C13DFE /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25738B891F1F655B00C13DFE /* Menu.swift */; };
 		25E2AE991F1C4C95001B558F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2AE981F1C4C95001B558F /* AppDelegate.swift */; };
 		25E2AE9B1F1C4C95001B558F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2AE9A1F1C4C95001B558F /* ViewController.swift */; };
@@ -17,6 +26,8 @@
 		25E2AEA31F1C4C95001B558F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E2AEA11F1C4C95001B558F /* LaunchScreen.storyboard */; };
 		25E2AEAE1F1C4C95001B558F /* Restaurant_JacobsenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2AEAD1F1C4C95001B558F /* Restaurant_JacobsenTests.swift */; };
 		25E2AEB91F1C4C95001B558F /* Restaurant_JacobsenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2AEB81F1C4C95001B558F /* Restaurant_JacobsenUITests.swift */; };
+		37B204681E5340CCFE74C961 /* Pods_Restaurant_JacobsenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AA535F7D27C558372AFF7A /* Pods_Restaurant_JacobsenUITests.framework */; };
+		460C5C8852CD60EB8FE4D1D7 /* Pods_Restaurant_Jacobsen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B6E7CB310D34F1F2D753FD /* Pods_Restaurant_Jacobsen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2CCB2DB15151B1A7F38C55 /* Pods-Restaurant JacobsenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenTests/Pods-Restaurant JacobsenTests.release.xcconfig"; sourceTree = "<group>"; };
+		23AA535F7D27C558372AFF7A /* Pods_Restaurant_JacobsenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurant_JacobsenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25317C971F1DDBF600C549E1 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		25317C991F1DDDBD00C549E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		256397B01F324B84000E1D04 /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuHeaderReusableView.swift; path = ../MenuHeaderReusableView.swift; sourceTree = "<group>"; };
+		256397B61F328163000E1D04 /* MenuSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSplitViewController.swift; sourceTree = "<group>"; };
+		256397B81F33C460000E1D04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataObject.swift; sourceTree = "<group>"; };
+		256397BE1F36C447000E1D04 /* AtomicInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
+		25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewController.swift; sourceTree = "<group>"; };
 		25738B891F1F655B00C13DFE /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		25E2AE951F1C4C95001B558F /* Restaurant Jacobsen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Jacobsen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2AE981F1C4C95001B558F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +72,13 @@
 		25E2AEB41F1C4C95001B558F /* Restaurant JacobsenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Restaurant JacobsenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2AEB81F1C4C95001B558F /* Restaurant_JacobsenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant_JacobsenUITests.swift; sourceTree = "<group>"; };
 		25E2AEBA1F1C4C95001B558F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6314FC1B5B283D5C50C6782F /* Pods-Restaurant Jacobsen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant Jacobsen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant Jacobsen/Pods-Restaurant Jacobsen.debug.xcconfig"; sourceTree = "<group>"; };
+		6E88728CCC05538AC46117A5 /* Pods_Restaurant_JacobsenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurant_JacobsenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B6E7CB310D34F1F2D753FD /* Pods_Restaurant_Jacobsen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurant_Jacobsen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE3E6BB461BB3205D88D624 /* Pods-Restaurant Jacobsen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant Jacobsen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant Jacobsen/Pods-Restaurant Jacobsen.release.xcconfig"; sourceTree = "<group>"; };
+		A738E18C7AE896B025CE1D00 /* Pods-Restaurant JacobsenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenUITests/Pods-Restaurant JacobsenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BB4352636C0A747E47B6330B /* Pods-Restaurant JacobsenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenTests/Pods-Restaurant JacobsenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF4F969B037A9CCCC8243C38 /* Pods-Restaurant JacobsenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenUITests/Pods-Restaurant JacobsenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460C5C8852CD60EB8FE4D1D7 /* Pods_Restaurant_Jacobsen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20202D370439868CF1B58BDC /* Pods_Restaurant_JacobsenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B204681E5340CCFE74C961 /* Pods_Restaurant_JacobsenUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +116,8 @@
 				25E2AEAC1F1C4C95001B558F /* Restaurant JacobsenTests */,
 				25E2AEB71F1C4C95001B558F /* Restaurant JacobsenUITests */,
 				25E2AE961F1C4C95001B558F /* Products */,
+				617010737D3FE4054A6E21A9 /* Pods */,
+				D611F3D9162953FE109F0C5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,12 +137,18 @@
 				25E2AE981F1C4C95001B558F /* AppDelegate.swift */,
 				25E2AE9A1F1C4C95001B558F /* ViewController.swift */,
 				25E2AE9C1F1C4C95001B558F /* Main.storyboard */,
-				25317C991F1DDDBD00C549E1 /* DetailViewController.swift */,
 				25317C971F1DDBF600C549E1 /* MasterViewController.swift */,
+				25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */,
 				25738B891F1F655B00C13DFE /* Menu.swift */,
 				25E2AE9F1F1C4C95001B558F /* Assets.xcassets */,
 				25E2AEA11F1C4C95001B558F /* LaunchScreen.storyboard */,
 				25E2AEA41F1C4C95001B558F /* Info.plist */,
+				256397B81F33C460000E1D04 /* GoogleService-Info.plist */,
+				256397B01F324B84000E1D04 /* MenuItemCell.swift */,
+				256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */,
+				256397B61F328163000E1D04 /* MenuSplitViewController.swift */,
+				256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */,
+				256397BE1F36C447000E1D04 /* AtomicInteger.swift */,
 			);
 			path = "Restaurant Jacobsen";
 			sourceTree = "<group>";
@@ -134,6 +171,29 @@
 			path = "Restaurant JacobsenUITests";
 			sourceTree = "<group>";
 		};
+		617010737D3FE4054A6E21A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6314FC1B5B283D5C50C6782F /* Pods-Restaurant Jacobsen.debug.xcconfig */,
+				9BE3E6BB461BB3205D88D624 /* Pods-Restaurant Jacobsen.release.xcconfig */,
+				BB4352636C0A747E47B6330B /* Pods-Restaurant JacobsenTests.debug.xcconfig */,
+				0F2CCB2DB15151B1A7F38C55 /* Pods-Restaurant JacobsenTests.release.xcconfig */,
+				BF4F969B037A9CCCC8243C38 /* Pods-Restaurant JacobsenUITests.debug.xcconfig */,
+				A738E18C7AE896B025CE1D00 /* Pods-Restaurant JacobsenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D611F3D9162953FE109F0C5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90B6E7CB310D34F1F2D753FD /* Pods_Restaurant_Jacobsen.framework */,
+				6E88728CCC05538AC46117A5 /* Pods_Restaurant_JacobsenTests.framework */,
+				23AA535F7D27C558372AFF7A /* Pods_Restaurant_JacobsenUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25E2AEBD1F1C4C95001B558F /* Build configuration list for PBXNativeTarget "Restaurant Jacobsen" */;
 			buildPhases = (
+				A458412FEE39BA85B3BD48B4 /* [CP] Check Pods Manifest.lock */,
 				25E2AE911F1C4C95001B558F /* Sources */,
 				25E2AE921F1C4C95001B558F /* Frameworks */,
 				25E2AE931F1C4C95001B558F /* Resources */,
+				D60C1E845C91CF113052E70C /* [CP] Embed Pods Frameworks */,
+				DE7E1E77F32ED9410748F751 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25E2AEC01F1C4C95001B558F /* Build configuration list for PBXNativeTarget "Restaurant JacobsenTests" */;
 			buildPhases = (
+				308BD7E6FE883E7E1738ABB3 /* [CP] Check Pods Manifest.lock */,
 				25E2AEA51F1C4C95001B558F /* Sources */,
 				25E2AEA61F1C4C95001B558F /* Frameworks */,
 				25E2AEA71F1C4C95001B558F /* Resources */,
+				F81EBD067B9ECECA96C6A570 /* [CP] Embed Pods Frameworks */,
+				65B33D534C8121FE41D649AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25E2AEC31F1C4C95001B558F /* Build configuration list for PBXNativeTarget "Restaurant JacobsenUITests" */;
 			buildPhases = (
+				D15F1A0AF1EA10D2F3F65348 /* [CP] Check Pods Manifest.lock */,
 				25E2AEB01F1C4C95001B558F /* Sources */,
 				25E2AEB11F1C4C95001B558F /* Frameworks */,
 				25E2AEB21F1C4C95001B558F /* Resources */,
+				D76834D94E16B45744871F01 /* [CP] Embed Pods Frameworks */,
+				2D3A7F5138AC8A35A627E266 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E2AEA31F1C4C95001B558F /* LaunchScreen.storyboard in Resources */,
+				256397B91F33C460000E1D04 /* GoogleService-Info.plist in Resources */,
 				25E2AEA01F1C4C95001B558F /* Assets.xcassets in Resources */,
 				25E2AE9E1F1C4C95001B558F /* Main.storyboard in Resources */,
 			);
@@ -251,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256397BA1F33C460000E1D04 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,20 +329,182 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256397BB1F33C460000E1D04 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D3A7F5138AC8A35A627E266 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant JacobsenUITests/Pods-Restaurant JacobsenUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		308BD7E6FE883E7E1738ABB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Restaurant JacobsenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65B33D534C8121FE41D649AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant JacobsenTests/Pods-Restaurant JacobsenTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A458412FEE39BA85B3BD48B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Restaurant Jacobsen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D15F1A0AF1EA10D2F3F65348 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Restaurant JacobsenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D60C1E845C91CF113052E70C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant Jacobsen/Pods-Restaurant Jacobsen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant Jacobsen/Pods-Restaurant Jacobsen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76834D94E16B45744871F01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant JacobsenUITests/Pods-Restaurant JacobsenUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE7E1E77F32ED9410748F751 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant Jacobsen/Pods-Restaurant Jacobsen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F81EBD067B9ECECA96C6A570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restaurant JacobsenTests/Pods-Restaurant JacobsenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		25E2AE911F1C4C95001B558F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256397B71F328163000E1D04 /* MenuSplitViewController.swift in Sources */,
+				256397B51F325B02000E1D04 /* MenuHeaderReusableView.swift in Sources */,
 				25E2AE9B1F1C4C95001B558F /* ViewController.swift in Sources */,
+				25659A631F26D25A005CCB0B /* DetailCollectionViewController.swift in Sources */,
 				25E2AE991F1C4C95001B558F /* AppDelegate.swift in Sources */,
+				256397B11F324B84000E1D04 /* MenuItemCell.swift in Sources */,
 				25317C981F1DDBF600C549E1 /* MasterViewController.swift in Sources */,
-				25317C9A1F1DDDBD00C549E1 /* DetailViewController.swift in Sources */,
+				256397BF1F36C447000E1D04 /* AtomicInteger.swift in Sources */,
+				256397BD1F357BFB000E1D04 /* FirebaseDataObject.swift in Sources */,
 				25738B8A1F1F655B00C13DFE /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +653,7 @@
 		};
 		25E2AEBE1F1C4C95001B558F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6314FC1B5B283D5C50C6782F /* Pods-Restaurant Jacobsen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Restaurant Jacobsen/Info.plist";
@@ -432,6 +666,7 @@
 		};
 		25E2AEBF1F1C4C95001B558F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE3E6BB461BB3205D88D624 /* Pods-Restaurant Jacobsen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Restaurant Jacobsen/Info.plist";
@@ -444,6 +679,7 @@
 		};
 		25E2AEC11F1C4C95001B558F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB4352636C0A747E47B6330B /* Pods-Restaurant JacobsenTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +694,7 @@
 		};
 		25E2AEC21F1C4C95001B558F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F2CCB2DB15151B1A7F38C55 /* Pods-Restaurant JacobsenTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +709,7 @@
 		};
 		25E2AEC41F1C4C95001B558F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF4F969B037A9CCCC8243C38 /* Pods-Restaurant JacobsenUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Restaurant JacobsenUITests/Info.plist";
@@ -485,6 +723,7 @@
 		};
 		25E2AEC51F1C4C95001B558F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A738E18C7AE896B025CE1D00 /* Pods-Restaurant JacobsenUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Restaurant JacobsenUITests/Info.plist";

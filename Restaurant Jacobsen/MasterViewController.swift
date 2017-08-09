@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
-class MasterViewController: UITableViewController {
+protocol CategorySelectionDelegate: class {
+    func categorySelected(newCategory: Menu.Category, menu: Menu)
+}
+
+class MasterViewController: UITableViewController, FirebaseDatabaseReference {
+    
+    weak var delegate: CategorySelectionDelegate?
+    var menu: Menu?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +26,28 @@ class MasterViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if menu == nil {
+            menu = Menu()
+            downloadCategories()
+        }
     }
+    
+    func downloadCategories(){
+        ref.child("MenuCategories").observe(.value, with: { snapshot in
+            for (index, child) in snapshot.children.enumerated() {
+                self.menu!.menuCategories[index+1] = (Menu.Category.init(snapshot: child as! DataSnapshot))
+                print(self.menu!.menuCategories[index+1]?.name ?? "doh")
+            }
+            self.refreshUI()
+        })
+    }
+    
+    func refreshUI() {
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,7 +63,7 @@ class MasterViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return menu?.menuCategories.count ?? 0
     }
 
     
@@ -42,8 +71,19 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
+        let categoryText = menu?.menuCategories[indexPath.row+1]?.name
+        cell.textLabel?.text = categoryText
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCategory = menu?.menuCategories[indexPath.row+1]
+        self.delegate?.categorySelected(newCategory: selectedCategory!, menu: menu!)
+        
+        if let detailCollectionViewController = self.delegate as? DetailCollectionViewController {
+            splitViewController?.showDetailViewController(detailCollectionViewController, sender: nil)
+        }
     }
     
     

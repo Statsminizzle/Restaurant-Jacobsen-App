@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Restaurant Jacobsen/AppDelegate.swift"
+            timestampString = "523601949.090874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "downloadMenu()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Restaurant Jacobsen/Menu.swift"
+            timestampString = "523601949.090874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Category"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Restaurant Jacobsen/DetailCollectionViewController.swift"
+            timestampString = "523934939.067262"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Restaurant_Jacobsen.DetailCollectionViewController.collectionView (__ObjC.UICollectionView, numberOfItemsInSection : Swift.Int) -&gt; Swift.Int"
+                  moduleName = "Restaurant Jacobsen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/int0x80/Desktop/Xcode%20Projects/Restaurant%20Jacobsen/Restaurant%20Jacobsen/DetailCollectionViewController.swift"
+                  timestampString = "523686958.617972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "1264">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Restaurant_Jacobsen.DetailCollectionViewController.collectionView (__ObjC.UICollectionView, numberOfItemsInSection : Swift.Int) -&gt; Swift.Int"
+                  moduleName = "Restaurant Jacobsen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/int0x80/Desktop/Xcode%20Projects/Restaurant%20Jacobsen/Restaurant%20Jacobsen/DetailCollectionViewController.swift"
+                  timestampString = "523686958.623335"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "3579">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Restaurant Jacobsen/DetailCollectionViewController.swift"
+            timestampString = "523690794.983521"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "downloadSections()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Restaurant_Jacobsen.DetailCollectionViewController.downloadItemsForSection (section : Restaurant_Jacobsen.Menu.Section) -&gt; ()"
+                  moduleName = "Restaurant Jacobsen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/int0x80/Desktop/Xcode%20Projects/Restaurant%20Jacobsen/Restaurant%20Jacobsen/DetailCollectionViewController.swift"
+                  timestampString = "523690795.524373"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "478">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Restaurant_Jacobsen.DetailCollectionViewController.(downloadItemsForSection (section : Restaurant_Jacobsen.Menu.Section) -&gt; ()).(closure #1)"
+                  moduleName = "Restaurant Jacobsen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/int0x80/Desktop/Xcode%20Projects/Restaurant%20Jacobsen/Restaurant%20Jacobsen/DetailCollectionViewController.swift"
+                  timestampString = "523690795.530448"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
