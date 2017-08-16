@@ -117,6 +117,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2504FE121F443E60002334B0 /* Menu tab */ = {
+			isa = PBXGroup;
+			children = (
+				25317C971F1DDBF600C549E1 /* MasterViewController.swift */,
+				25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */,
+				256397B01F324B84000E1D04 /* MenuItemCell.swift */,
+				256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */,
+				256397B61F328163000E1D04 /* MenuSplitViewController.swift */,
+			);
+			name = "Menu tab";
+			sourceTree = "<group>";
+		};
+		2504FE131F443EA9002334B0 /* Reservation tab */ = {
+			isa = PBXGroup;
+			children = (
+				2504FE081F3BC7EC002334B0 /* ReservationViewController.swift */,
+				2504FE101F432391002334B0 /* ReservationDetailViewController.swift */,
+			);
+			name = "Reservation tab";
+			sourceTree = "<group>";
+		};
+		2504FE141F443ED7002334B0 /* Contact tab */ = {
+			isa = PBXGroup;
+			children = (
+				2504FE0A1F412CBD002334B0 /* ContactViewController.swift */,
+			);
+			name = "Contact tab";
+			sourceTree = "<group>";
+		};
+		2504FE151F443EF5002334B0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */,
+				256397BE1F36C447000E1D04 /* AtomicInteger.swift */,
+				2504FE0C1F42CCEF002334B0 /* PlaceholderColorExtension.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		2504FE161F443F04002334B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2504FE0E1F431DB0002334B0 /* Reservation.swift */,
+				25738B891F1F655B00C13DFE /* Menu.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		25E2AE8C1F1C4C95001B558F = {
 			isa = PBXGroup;
 			children = (
@@ -144,23 +192,15 @@
 			children = (
 				25E2AE981F1C4C95001B558F /* AppDelegate.swift */,
 				25E2AE9C1F1C4C95001B558F /* Main.storyboard */,
-				25317C971F1DDBF600C549E1 /* MasterViewController.swift */,
-				25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */,
-				25738B891F1F655B00C13DFE /* Menu.swift */,
+				2504FE141F443ED7002334B0 /* Contact tab */,
+				2504FE121F443E60002334B0 /* Menu tab */,
+				2504FE131F443EA9002334B0 /* Reservation tab */,
+				2504FE161F443F04002334B0 /* Model */,
+				2504FE151F443EF5002334B0 /* Utilities */,
 				25E2AE9F1F1C4C95001B558F /* Assets.xcassets */,
 				25E2AEA11F1C4C95001B558F /* LaunchScreen.storyboard */,
 				25E2AEA41F1C4C95001B558F /* Info.plist */,
 				256397B81F33C460000E1D04 /* GoogleService-Info.plist */,
-				256397B01F324B84000E1D04 /* MenuItemCell.swift */,
-				2504FE0A1F412CBD002334B0 /* ContactViewController.swift */,
-				256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */,
-				256397B61F328163000E1D04 /* MenuSplitViewController.swift */,
-				256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */,
-				256397BE1F36C447000E1D04 /* AtomicInteger.swift */,
-				2504FE081F3BC7EC002334B0 /* ReservationViewController.swift */,
-				2504FE0C1F42CCEF002334B0 /* PlaceholderColorExtension.swift */,
-				2504FE0E1F431DB0002334B0 /* Reservation.swift */,
-				2504FE101F432391002334B0 /* ReservationDetailViewController.swift */,
 			);
 			path = "Restaurant Jacobsen";
 			sourceTree = "<group>";
