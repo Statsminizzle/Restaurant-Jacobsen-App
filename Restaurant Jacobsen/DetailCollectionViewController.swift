@@ -99,11 +99,6 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
 
         // Register cell classes
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
-        
-        //testData - fjernigen
-        //category = menu?.menuCategories[1]
     }
 
     override func didReceiveMemoryWarning() {
@@ -124,14 +119,12 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         print("category nil \(category == nil)")
         if category != nil {
             if menu!.menuSections[category.name!] != nil {
                 print("SECTIONS = \(menu!.menuSections[category.name!]!.count)")
             }
             print("numberOfSections in view = \((menu!.menuSections[category.name!]?.count)) and nos = \(self.numberOfSections)")
-            //return numberOfSections ?? 0
             return (menu!.menuSections[category.name!]?.count) ?? 0
         }
         return 0
@@ -139,20 +132,14 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         let sections = menu?.menuSections[category.name!]
         let section = sections?[section+1]
         
         if section != nil {
           return (menu?.menuItems[(section!.name)!]?.count) ?? 0
         }
-        /*if menu?.menuItems[((section?.name))!] != nil {
-            return (menu?.menuItems[(section?.name)!]?.count)!
-        }
-        */
-        return 0
         
-        //return (menu?.menuItems[(section?.name)!]?.count) ?? 0
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -185,7 +172,7 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseHeaderIdentifier, for: indexPath) as! MenuHeaderReusableView
             let sections = menu?.menuSections[category.name!]
             let section = sections?[indexPath.section+1]
-            //header.title.text = section?.name
+            
             if section != nil {
             let underlineAttribute = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
             let underlineAttributedString = NSAttributedString(string: (section?.name)!, attributes: underlineAttribute)
@@ -213,21 +200,6 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
         return true
     }
     */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
     
     func refreshUI() {
         DispatchQueue.main.async {
@@ -236,6 +208,7 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
     }
 }
 
+// MARK: - CategorySelectionDelegate
 extension DetailCollectionViewController: CategorySelectionDelegate {
     func categorySelected(newCategory: Menu.Category, menu: Menu) {
         category = newCategory
