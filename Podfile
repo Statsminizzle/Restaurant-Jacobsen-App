@@ -6,10 +6,11 @@ target 'Restaurant Jacobsen' do
   use_frameworks!
 
   # Pods for Restaurant Jacobsen
-pod ‘Firebase/Core’
-pod ‘Firebase/Auth’
-pod ‘Firebase/Database’
-pod ‘Firebase/Messaging’
+pod "Firebase/Core"
+pod "Firebase/Auth"
+pod "Firebase/Database"
+pod "Firebase/Messaging"
+pod "SwiftValidator", :git => "https://github.com/jpotts18/SwiftValidator.git", :branch => "master"
 
   target 'Restaurant JacobsenTests' do
     inherit! :search_paths

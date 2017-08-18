@@ -28,6 +28,7 @@ class ReservationViewController: UIViewController {
     var minutes: [String] = ["00","15", "30", "45"]
     
     var reservation: Reservation?
+    var isoDate: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +85,9 @@ class ReservationViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full
         dateTextField.text = dateFormatter.string(from: sender.date)
+        
+        let isoDateFormatter = ISO8601DateFormatter()
+        isoDate = isoDateFormatter.string(from: sender.date)
     }
     
     func removePicker(){
@@ -91,7 +95,7 @@ class ReservationViewController: UIViewController {
     }
     
     func acceptReservation() {
-        reservation = Reservation(numberOfPersons: numberOfPersonsTextSelected!, date: dateTextField.text!, time: selectTimeTextField.text!, contact: nil)
+        reservation = Reservation(numberOfPersons: numberOfPersonsTextSelected!, date: dateTextField.text!, isoDate: isoDate!, time: selectTimeTextField.text!, contact: nil)
         
         self.performSegue(withIdentifier: "ReservationDetail", sender: self)
     }

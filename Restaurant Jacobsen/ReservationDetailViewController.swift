@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwiftValidator
 
-class ReservationDetailViewController: UIViewController {
+class ReservationDetailViewController: UIViewController, FirebaseDatabaseReference {
 
     @IBOutlet weak var reservationDetailLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,14 +23,24 @@ class ReservationDetailViewController: UIViewController {
     @IBOutlet weak var phoneErrorLabel: UILabel!
     @IBOutlet weak var emailErrorLabel: UILabel!
     
-    
+    let validator = Validator()
     var reservation: Reservation?
+    var redColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Hiding storyboard labels
+        nameErrorLabel.isHidden = true
+        phoneErrorLabel.isHidden = true
+        emailErrorLabel.isHidden = true
+        
+        redColor = nameErrorLabel.textColor
         reservationDetailLabel.text = reservation!.getReservationDetailText()
-        confirmReservationButton.addTarget(self, action: #selector(confirmReservation(sender:)), for: .touchUpInside)
+        confirmReservationButton.addTarget(self, action: #selector(validateFields(sender:)), for: .touchUpInside)
+        
+        setValidatorStyleTransformers(validator: validator)
+        setValidatorFields()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,10 +48,18 @@ class ReservationDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     func confirmReservation(sender: UIButton) {
         let contact = Reservation.Contact(name: nameTextField.text!, email: emailTextField.text!, phone: phoneTextField.text!, comment: commentTextField.text!, birthday: birthdaySwitch.isOn)
         reservation?.contact = contact
-        
+        saveReservation()
+        let confirmation = UIAlertController.init(title: "Success", message: "Din reservation er modtaget", preferredStyle: .alert)
+        confirmation.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+        self.present(confirmation, animated: true, completion: nil)
+    }
+    
+    func saveReservation() {
+        ref.child("reservations").childByAutoId().setValue(reservation!.toDictionary())
     }
     
 
@@ -54,4 +73,49 @@ class ReservationDetailViewController: UIViewController {
     }
     */
 
+}
+
+    // MARK: - Validation
+extension ReservationDetailViewController: ValidationDelegate{
+    
+    func validateFields(sender: UIButton) {
+        validator.validate(self)
+    }
+    
+    func setValidatorStyleTransformers(validator: Validator) {
+        validator.styleTransformers(success: { (validationRule) -> Void in
+            validationRule.errorLabel?.isHidden = true
+            
+            if let textField = validationRule.field as? UITextField {
+                textField.layer.borderColor = UIColor.clear.cgColor
+            }
+            
+        }, error: { (validationError) -> Void in
+            validationError.errorLabel?.isHidden = false
+            validationError.errorLabel?.text = validationError.errorMessage
+            if let textField = validationError.field as? UITextField {
+                textField.layer.cornerRadius = 5
+                textField.layer.borderColor = self.redColor?.cgColor
+                textField.layer.borderWidth = 1.0
+            }
+            
+        })
+    }
+    
+    func setValidatorFields() {
+        validator.registerField(nameTextField, errorLabel: nameErrorLabel, rules: [RequiredRule(message: "Dette felt er påkrævet"), FullNameRule(message: "Fornavn og efternavn påkrævet")])
+        validator.registerField(phoneTextField, errorLabel: phoneErrorLabel, rules: [RequiredRule(message: "Dette felt er påkrævet"), MinLengthRule(length: 8, message: "Skal være 8 karakterer")])
+        validator.registerField(emailTextField, errorLabel: emailErrorLabel, rules: [RequiredRule(message: "Dette felt er påkrævet"), EmailRule(message: "Gyldig email-adresse påkrævet")])
+    }
+    
+    // MARK: ValidationDelegate
+    
+    func validationSuccessful() {
+        confirmReservation(sender: confirmReservationButton)
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        print("validation failed")
+    }
+    
 }

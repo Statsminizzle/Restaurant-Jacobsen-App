@@ -12,6 +12,7 @@ struct Reservation {
 
     var numberOfPersons: String
     var date: String
+    var isoDate: String
     var time: String
     
     var contact: Contact?
@@ -29,7 +30,7 @@ struct Reservation {
     }
     
     func toDictionary() -> [String: Any] {
-        let dictionary: [String: Any] = ["name": self.contact!.name, "email": self.contact!.email, "phone": self.contact!.phone, "comment": self.contact!.comment ?? "", "birthday": self.contact!.birthday, "numberOfPersons": self.numberOfPersons, "date": self.date, "time": self.time]
+        let dictionary: [String: Any] = ["name": self.contact!.name, "email": self.contact!.email, "phone": self.contact!.phone, "comment": self.contact!.comment ?? "", "birthday": self.contact!.birthday, "numberOfPersons": self.numberOfPersons, "date": self.date, "time": self.time, "isoDate" : isoDate]
         return dictionary
     }
 }

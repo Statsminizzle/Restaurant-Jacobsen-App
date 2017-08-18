@@ -74,6 +74,7 @@ extension ContactViewController: MFMailComposeViewControllerDelegate {
             self.dismiss(animated: true, completion: {
             let error = UIAlertController.init(title: "Fejl", message: "Din mail blev ikke sendt. Check dine email-indstillinger og prøv igen", preferredStyle: .alert)
             error.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+            self.present(error, animated: true, completion: nil)
             })
         } else {
             self.dismiss(animated: true, completion: nil)
