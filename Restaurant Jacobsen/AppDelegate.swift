@@ -27,7 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference
         
         masterViewController.delegate = detailCollectionViewController
         
-        downloadMenu()
+        //downloadMenu()
+        
+        // MARK: Color theme for app
+        UIApplication.shared.statusBarStyle = .lightContent
+        let navigationBarAppearance = UINavigationBar.appearance()
+        // TODO: Need to find a reasonable tint color
+        navigationBarAppearance.tintColor = UIColor.yellow
+        navigationBarAppearance.barTintColor = UIColor.init(rgb: 0x191919)
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
         return true
     }

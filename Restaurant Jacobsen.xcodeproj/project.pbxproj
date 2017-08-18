@@ -13,6 +13,7 @@
 		2504FE0D1F42CCEF002334B0 /* PlaceholderColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504FE0C1F42CCEF002334B0 /* PlaceholderColorExtension.swift */; };
 		2504FE0F1F431DB0002334B0 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504FE0E1F431DB0002334B0 /* Reservation.swift */; };
 		2504FE111F432391002334B0 /* ReservationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504FE101F432391002334B0 /* ReservationDetailViewController.swift */; };
+		2504FE1A1F46FDA0002334B0 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504FE191F46FDA0002334B0 /* HexToColor.swift */; };
 		25317C981F1DDBF600C549E1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25317C971F1DDBF600C549E1 /* MasterViewController.swift */; };
 		256397B11F324B84000E1D04 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B01F324B84000E1D04 /* MenuItemCell.swift */; };
 		256397B51F325B02000E1D04 /* MenuHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */; };
@@ -59,6 +60,7 @@
 		2504FE0C1F42CCEF002334B0 /* PlaceholderColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderColorExtension.swift; sourceTree = "<group>"; };
 		2504FE0E1F431DB0002334B0 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		2504FE101F432391002334B0 /* ReservationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationDetailViewController.swift; sourceTree = "<group>"; };
+		2504FE191F46FDA0002334B0 /* HexToColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexToColor.swift; sourceTree = "<group>"; };
 		25317C971F1DDBF600C549E1 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		256397B01F324B84000E1D04 /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuHeaderReusableView.swift; path = ../MenuHeaderReusableView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */,
 				256397BE1F36C447000E1D04 /* AtomicInteger.swift */,
 				2504FE0C1F42CCEF002334B0 /* PlaceholderColorExtension.swift */,
+				2504FE191F46FDA0002334B0 /* HexToColor.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				256397BD1F357BFB000E1D04 /* FirebaseDataObject.swift in Sources */,
 				2504FE0F1F431DB0002334B0 /* Reservation.swift in Sources */,
 				25738B8A1F1F655B00C13DFE /* Menu.swift in Sources */,
+				2504FE1A1F46FDA0002334B0 /* HexToColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
