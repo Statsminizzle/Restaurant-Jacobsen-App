@@ -1,22 +1,25 @@
 //
-//  MasterViewController.swift
+//  NewsTableViewController.swift
 //  Restaurant Jacobsen
 //
-//  Created by int0x80 on 18/07/2017.
+//  Created by int0x80 on 21/08/2017.
 //  Copyright © 2017 int0x80. All rights reserved.
 //
 
 import UIKit
 import FirebaseDatabase
 
-protocol CategorySelectionDelegate: class {
-    func categorySelected(newCategory: Menu.Category, menu: Menu)
-}
-
-class MasterViewController: UITableViewController, FirebaseDatabaseReference {
+class NewsTableViewController: UITableViewController, FirebaseDatabaseReference {
     
-    weak var delegate: CategorySelectionDelegate?
-    var menu: Menu?
+    var news: News?
+    
+    func downloadNews() {
+        ref.child("News").observe(.value, with: { snapshot in
+            for (index, child) in snapshot.children.enumerated() {
+                
+            }
+        })
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,28 +29,10 @@ class MasterViewController: UITableViewController, FirebaseDatabaseReference {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        if menu == nil {
-            menu = Menu()
-            downloadCategories()
-        }
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
-    
-    func downloadCategories(){
-        ref.child("MenuCategories").observe(.value, with: { snapshot in
-            for (index, child) in snapshot.children.enumerated() {
-                self.menu!.menuCategories[index+1] = (Menu.Category.init(snapshot: child as! DataSnapshot))
-                print(self.menu!.menuCategories[index+1]?.name ?? "doh")
-            }
-            self.refreshUI()
-        })
-    }
-    
-    func refreshUI() {
-        DispatchQueue.main.async {
-            self.tableView?.reloadData()
-        }
-    }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,34 +46,19 @@ class MasterViewController: UITableViewController, FirebaseDatabaseReference {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menu?.menuCategories.count ?? 0
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let categoryText = menu?.menuCategories[indexPath.row+1]?.name
-        cell.textLabel?.text = categoryText
+        // Configure the cell...
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCategory = menu?.menuCategories[indexPath.row+1]
-        self.delegate?.categorySelected(newCategory: selectedCategory!, menu: menu!)
-        /*
-        if let detailCollectionViewController = self.delegate as? DetailCollectionViewController {
-            splitViewController?.showDetailViewController(detailCollectionViewController, sender: nil)
-        }*/
-        
-        if let detailTableViewController = self.delegate as? DetailTableViewController {
-            
-            splitViewController?.showDetailViewController(detailTableViewController, sender: nil)
-        }
-    }
-    
-    
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -29,6 +29,9 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
     var counter: AtomicInteger?
     var numberOfSections: Int = 0
 
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
+    
     var category: Menu.Category! {
         didSet {
             if oldValue != nil {
@@ -99,6 +102,9 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
 
         // Register cell classes
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        //flowLayout.estimatedItemSize = CGSize.init(width: 50, height: 50)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -136,6 +142,8 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
         let section = sections?[section+1]
         
         if section != nil {
+           let counter = (menu?.menuItems[(section!.name)!]?.count) ?? 0
+            print("SECTION \(section) has \(counter) ITEMS")
           return (menu?.menuItems[(section!.name)!]?.count) ?? 0
         }
         
@@ -176,6 +184,7 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
             if section != nil {
             let underlineAttribute = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
             let underlineAttributedString = NSAttributedString(string: (section?.name)!, attributes: underlineAttribute)
+            //let underlineAttributedString = NSAttributedString(string: ("\(indexPath.section)"), attributes: underlineAttribute)
             header.title.attributedText = underlineAttributedString
             }
             return header
@@ -204,6 +213,7 @@ class DetailCollectionViewController: UICollectionViewController, FirebaseDataba
     func refreshUI() {
         DispatchQueue.main.async {
             self.collectionView?.reloadData()
+            self.flowLayout.invalidateLayout()
         }
     }
 }

@@ -17,12 +17,19 @@ class MenuSplitViewController: UISplitViewController, UISplitViewControllerDeleg
     }
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        guard let detailCollectionViewController = secondaryViewController as? DetailCollectionViewController else {
+        guard let navigationController = secondaryViewController as? UINavigationController else {
             print("detailCollectionViewController false")
             print(secondaryViewController.classForCoder)
-            return false }
+            return false
+        }
         
-        if detailCollectionViewController.category == nil {
+        guard let detailTableViewController = navigationController.topViewController as? DetailTableViewController else {
+            print("detailCollectionViewController false")
+            print(secondaryViewController.classForCoder)
+            return false
+        }
+        
+        if detailTableViewController.category == nil {
             print("category nil = true")
             return true
         }

@@ -23,11 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference
         let splitViewController = tabBarController.viewControllers?[3] as! UISplitViewController
         let leftNavigationController = splitViewController.viewControllers.first as! UINavigationController
         let masterViewController = leftNavigationController.topViewController as! MasterViewController
-        let detailCollectionViewController = splitViewController.viewControllers.last as! DetailCollectionViewController
+        
+        let rightNavigationController = splitViewController.viewControllers.last as! UINavigationController
+        let detailTableViewController = rightNavigationController.topViewController as! DetailTableViewController
+        
+        masterViewController.delegate = detailTableViewController
+        
+        /*let detailCollectionViewController = splitViewController.viewControllers.last as! DetailCollectionViewController
         
         masterViewController.delegate = detailCollectionViewController
-        
-        //downloadMenu()
+        */
+        downloadMenu()
         
         // MARK: Color theme for app
         UIApplication.shared.statusBarStyle = .lightContent
