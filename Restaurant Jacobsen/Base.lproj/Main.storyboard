@@ -1077,7 +1077,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="7Fz-Lm-qvW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zis-jc-3KU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nyheder" id="uTQ-Ca-7gp"/>
+                    <tabBarItem key="tabBarItem" title="Nyheder" selectedImage="icons8-News_25" id="uTQ-Ca-7gp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="46s-LC-N6a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1225,6 +1225,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
     </scenes>
     <resources>
         <image name="icons8-Marker_25" width="25" height="25"/>
+        <image name="icons8-News_25" width="25" height="25"/>
         <image name="icons8-Phone_25" width="25" height="25"/>
         <image name="icons8-Restaurant Table_25" width="25" height="25"/>
         <image name="icons8-Sidebar Menu_25" width="25" height="25"/>
