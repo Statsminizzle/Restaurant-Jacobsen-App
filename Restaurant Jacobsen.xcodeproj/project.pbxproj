@@ -764,6 +764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "int0x80.Restaurant-Jacobsen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -778,6 +779,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "int0x80.Restaurant-Jacobsen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
