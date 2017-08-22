@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dxb-XL-40Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dxb-XL-40Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -634,7 +634,7 @@
         <scene sceneID="9LV-fx-Dsw">
             <objects>
                 <splitViewController id="Bih-Jr-n2U" customClass="MenuSplitViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menukort" selectedImage="icons8-Sidebar Menu_25" id="oCa-zi-5r6"/>
+                    <tabBarItem key="tabBarItem" title="Menukort" image="icons8-Sidebar Menu_25" id="oCa-zi-5r6"/>
                     <connections>
                         <segue destination="4br-Vt-jrR" kind="relationship" relationship="masterViewController" id="0rZ-YQ-4Zu"/>
                         <segue destination="KnK-8Y-rZf" kind="relationship" relationship="detailViewController" id="vCb-6J-9h7"/>
@@ -674,7 +674,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L05-W7-hcq">
-                                            <rect key="frame" x="307" y="16" width="60" height="12"/>
+                                            <rect key="frame" x="307.5" y="16" width="59.5" height="12"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="129 kr.">
                                                     <attributes>
@@ -687,7 +687,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao9-oM-qPj">
-                                            <rect key="frame" x="59" y="0.0" width="248" height="43"/>
+                                            <rect key="frame" x="59.5" y="0.0" width="247.5" height="43"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
                                                     <string key="content">Husets platte 
@@ -915,17 +915,23 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bV-j1-yJt">
-                                <rect key="frame" x="121" y="307" width="132" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Find Vej!"/>
+                                <rect key="frame" x="67" y="314.5" width="241" height="38"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="1i3-xn-iMQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="20"/>
+                                <state key="normal" title="Find vej!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6bV-j1-yJt" firstAttribute="top" secondItem="2ue-I0-5gh" secondAttribute="bottom" constant="243" id="Erq-Ge-WYx"/>
-                            <constraint firstItem="6bV-j1-yJt" firstAttribute="leading" secondItem="SR1-OP-87W" secondAttribute="leadingMargin" constant="105" id="fSm-g0-H3S"/>
-                            <constraint firstItem="jhR-Oo-rvs" firstAttribute="top" secondItem="6bV-j1-yJt" secondAttribute="bottom" constant="259" id="iZ5-LI-bVp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6bV-j1-yJt" secondAttribute="trailing" constant="106" id="pnt-Em-lYp"/>
+                            <constraint firstItem="6bV-j1-yJt" firstAttribute="centerX" secondItem="SR1-OP-87W" secondAttribute="centerX" id="CdW-YB-NMY"/>
+                            <constraint firstItem="6bV-j1-yJt" firstAttribute="leading" secondItem="SR1-OP-87W" secondAttribute="leadingMargin" constant="51" id="fSm-g0-H3S"/>
+                            <constraint firstItem="6bV-j1-yJt" firstAttribute="centerY" secondItem="SR1-OP-87W" secondAttribute="centerY" id="pO2-gL-PWQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6bV-j1-yJt" secondAttribute="trailing" constant="51" id="pnt-Em-lYp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find vej" id="xW7-ro-OTQ"/>
@@ -938,7 +944,8 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="3W5-EK-SnU">
             <objects>
                 <tabBarController id="Dxb-XL-40Q" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="rU2-Ho-YUB">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="rU2-Ho-YUB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -958,7 +965,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <!--Kontakt-->
         <scene sceneID="vJX-oj-A4u">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGj-26-LWj" customClass="NavitationViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGj-26-LWj" customClass="ContactViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3gd-Ej-TTV"/>
                         <viewControllerLayoutGuide type="bottom" id="Reb-Xu-LHG"/>
@@ -972,7 +979,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-bx-xuJ">
                                         <rect key="frame" x="67" y="302" width="241" height="37"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="7SX-cY-gIm"/>
                                         </constraints>
@@ -980,7 +987,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Send email">
                                                     <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="20" name="SnellRoundhand"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -990,13 +997,13 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQG-Bu-0ZN">
                                         <rect key="frame" x="67" y="222" width="241" height="37"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="Ygh-wt-rHq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="20"/>
                                         <state key="normal" title="Ring til os">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -1023,8 +1030,8 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                     </view>
                     <navigationItem key="navigationItem" title="Kontakt" id="Cbm-yd-RSv"/>
                     <connections>
-                        <outlet property="callButton" destination="GQG-Bu-0ZN" id="uXt-K6-EvE"/>
-                        <outlet property="sendEmailButton" destination="78Q-bx-xuJ" id="W9F-m1-RY4"/>
+                        <outlet property="callButton" destination="GQG-Bu-0ZN" id="dI7-rT-7vv"/>
+                        <outlet property="sendEmailButton" destination="78Q-bx-xuJ" id="WII-AU-xza"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nay-S3-miS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1035,7 +1042,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="6at-SD-Fxb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fGl-Ks-not" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find vej" selectedImage="icons8-Marker_25" id="gth-s6-xim"/>
+                    <tabBarItem key="tabBarItem" title="Find vej" image="icons8-Marker_25" id="gth-s6-xim"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="MIc-6s-3d4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1058,7 +1065,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="K3d-Xn-DEQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hH4-Ef-h6v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reservation" selectedImage="icons8-Restaurant Table_25" id="AH2-aC-bs1"/>
+                    <tabBarItem key="tabBarItem" title="Reservation" image="icons8-Restaurant Table_25" id="AH2-aC-bs1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ZKR-OL-ZFe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1077,7 +1084,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="7Fz-Lm-qvW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zis-jc-3KU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nyheder" selectedImage="icons8-News_25" id="uTQ-Ca-7gp"/>
+                    <tabBarItem key="tabBarItem" title="Nyheder" image="icons8-News_25" id="uTQ-Ca-7gp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="46s-LC-N6a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1189,7 +1196,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="gbM-b5-5uw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OdC-gh-wxG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kontakt" selectedImage="icons8-Phone_25" id="l5N-PX-E0U"/>
+                    <tabBarItem key="tabBarItem" title="Kontakt" image="icons8-Phone_25" id="l5N-PX-E0U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="x2c-T0-VmA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

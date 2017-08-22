@@ -38,10 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference
         // MARK: Color theme for app
         UIApplication.shared.statusBarStyle = .lightContent
         let navigationBarAppearance = UINavigationBar.appearance()
-        // TODO: Need to find a reasonable tint color
         navigationBarAppearance.tintColor = UIColor.yellow
         navigationBarAppearance.barTintColor = UIColor.init(rgb: 0x191919)
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        let tabBarAppearance = UITabBar.appearance()
+        //Selected item in tabbar
+        tabBarAppearance.tintColor = UIColor.yellow
         
         return true
     }
