@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dxb-XL-40Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dxb-XL-40Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -674,7 +674,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L05-W7-hcq">
-                                            <rect key="frame" x="307.5" y="16" width="59.5" height="12"/>
+                                            <rect key="frame" x="307" y="16" width="60" height="12"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="129 kr.">
                                                     <attributes>
@@ -687,7 +687,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao9-oM-qPj">
-                                            <rect key="frame" x="59.5" y="0.0" width="247.5" height="43"/>
+                                            <rect key="frame" x="59" y="0.0" width="248" height="43"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
                                                     <string key="content">Husets platte 
@@ -905,7 +905,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <!--Find vej-->
         <scene sceneID="mHF-Qg-JGz">
             <objects>
-                <viewController id="UTN-Cu-rFc" sceneMemberID="viewController">
+                <viewController id="UTN-Cu-rFc" customClass="NavigationViewController" customModule="Restaurant_Jacobsen" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ue-I0-5gh"/>
                         <viewControllerLayoutGuide type="bottom" id="jhR-Oo-rvs"/>
@@ -913,13 +913,29 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                     <view key="view" contentMode="scaleToFill" id="SR1-OP-87W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bV-j1-yJt">
+                                <rect key="frame" x="121" y="307" width="132" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Find Vej!"/>
+                                <connections>
+                                    <action selector="FindWayBtn:" destination="UTN-Cu-rFc" eventType="touchUpInside" id="FeJ-9z-Xkr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6bV-j1-yJt" firstAttribute="top" secondItem="2ue-I0-5gh" secondAttribute="bottom" constant="243" id="Erq-Ge-WYx"/>
+                            <constraint firstItem="6bV-j1-yJt" firstAttribute="leading" secondItem="SR1-OP-87W" secondAttribute="leadingMargin" constant="105" id="fSm-g0-H3S"/>
+                            <constraint firstItem="jhR-Oo-rvs" firstAttribute="top" secondItem="6bV-j1-yJt" secondAttribute="bottom" constant="259" id="iZ5-LI-bVp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6bV-j1-yJt" secondAttribute="trailing" constant="106" id="pnt-Em-lYp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find vej" id="xW7-ro-OTQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dey-BB-PGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="974"/>
+            <point key="canvasLocation" x="309.60000000000002" y="973.76311844077964"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3W5-EK-SnU">
