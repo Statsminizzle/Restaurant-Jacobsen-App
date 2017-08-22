@@ -634,7 +634,7 @@
         <scene sceneID="9LV-fx-Dsw">
             <objects>
                 <splitViewController id="Bih-Jr-n2U" customClass="MenuSplitViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menukort" id="oCa-zi-5r6"/>
+                    <tabBarItem key="tabBarItem" title="Menukort" selectedImage="icons8-Sidebar Menu_25" id="oCa-zi-5r6"/>
                     <connections>
                         <segue destination="4br-Vt-jrR" kind="relationship" relationship="masterViewController" id="0rZ-YQ-4Zu"/>
                         <segue destination="KnK-8Y-rZf" kind="relationship" relationship="detailViewController" id="vCb-6J-9h7"/>
@@ -905,7 +905,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <!--Find vej-->
         <scene sceneID="mHF-Qg-JGz">
             <objects>
-                <viewController id="UTN-Cu-rFc" customClass="NavigationViewController" customModule="Restaurant_Jacobsen" sceneMemberID="viewController">
+                <viewController id="UTN-Cu-rFc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ue-I0-5gh"/>
                         <viewControllerLayoutGuide type="bottom" id="jhR-Oo-rvs"/>
@@ -918,9 +918,6 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                 <rect key="frame" x="121" y="307" width="132" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Find Vej!"/>
-                                <connections>
-                                    <action selector="FindWayBtn:" destination="UTN-Cu-rFc" eventType="touchUpInside" id="FeJ-9z-Xkr"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -961,7 +958,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <!--Kontakt-->
         <scene sceneID="vJX-oj-A4u">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGj-26-LWj" customClass="ContactViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGj-26-LWj" customClass="NavitationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3gd-Ej-TTV"/>
                         <viewControllerLayoutGuide type="bottom" id="Reb-Xu-LHG"/>
@@ -1038,7 +1035,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="6at-SD-Fxb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fGl-Ks-not" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find vej" id="gth-s6-xim"/>
+                    <tabBarItem key="tabBarItem" title="Find vej" selectedImage="icons8-Marker_25" id="gth-s6-xim"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="MIc-6s-3d4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1061,7 +1058,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="K3d-Xn-DEQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hH4-Ef-h6v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reservation" id="AH2-aC-bs1"/>
+                    <tabBarItem key="tabBarItem" title="Reservation" selectedImage="icons8-Restaurant Table_25" id="AH2-aC-bs1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ZKR-OL-ZFe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1192,7 +1189,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="gbM-b5-5uw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OdC-gh-wxG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kontakt" id="l5N-PX-E0U"/>
+                    <tabBarItem key="tabBarItem" title="Kontakt" selectedImage="icons8-Phone_25" id="l5N-PX-E0U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="x2c-T0-VmA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1226,4 +1223,10 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
             <point key="canvasLocation" x="1136.8" y="5.8470764617691158"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Marker_25" width="25" height="25"/>
+        <image name="icons8-Phone_25" width="25" height="25"/>
+        <image name="icons8-Restaurant Table_25" width="25" height="25"/>
+        <image name="icons8-Sidebar Menu_25" width="25" height="25"/>
+    </resources>
 </document>
