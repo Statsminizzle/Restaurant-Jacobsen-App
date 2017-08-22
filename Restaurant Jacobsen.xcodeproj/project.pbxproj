@@ -37,7 +37,6 @@
 		25E2AEB91F1C4C95001B558F /* Restaurant_JacobsenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2AEB81F1C4C95001B558F /* Restaurant_JacobsenUITests.swift */; };
 		37B204681E5340CCFE74C961 /* Pods_Restaurant_JacobsenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AA535F7D27C558372AFF7A /* Pods_Restaurant_JacobsenUITests.framework */; };
 		460C5C8852CD60EB8FE4D1D7 /* Pods_Restaurant_Jacobsen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B6E7CB310D34F1F2D753FD /* Pods_Restaurant_Jacobsen.framework */; };
-		EC08FE451F4C71470012068A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC08FE441F4C71470012068A /* GoogleService-Info.plist */; };
 		EC25EE081F4C930600811388 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25EE071F4C930600811388 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +100,6 @@
 		A738E18C7AE896B025CE1D00 /* Pods-Restaurant JacobsenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenUITests/Pods-Restaurant JacobsenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB4352636C0A747E47B6330B /* Pods-Restaurant JacobsenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenTests/Pods-Restaurant JacobsenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF4F969B037A9CCCC8243C38 /* Pods-Restaurant JacobsenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant JacobsenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant JacobsenUITests/Pods-Restaurant JacobsenUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC08FE441F4C71470012068A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC25EE071F4C930600811388 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,7 +158,6 @@
 		2504FE141F443ED7002334B0 /* Contact tab */ = {
 			isa = PBXGroup;
 			children = (
-				EC25EE071F4C930600811388 /* NavigationViewController.swift */,
 				2504FE0A1F412CBD002334B0 /* ContactViewController.swift */,
 			);
 			name = "Contact tab";
@@ -282,6 +279,7 @@
 		EC25EE001F4C8D1300811388 /* FindVej tab */ = {
 			isa = PBXGroup;
 			children = (
+				EC25EE071F4C930600811388 /* NavigationViewController.swift */,
 			);
 			name = "FindVej tab";
 			sourceTree = "<group>";

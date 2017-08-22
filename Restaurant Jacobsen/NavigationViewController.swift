@@ -23,7 +23,7 @@ class NavigationViewController: UIViewController {
         
         let placemark = MKPlacemark(coordinate: coordinates)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "Resturant Jacobsen"
+        mapItem.name = "Restaurant Jacobsen"
         mapItem.openInMaps(launchOptions: option)
         
         
