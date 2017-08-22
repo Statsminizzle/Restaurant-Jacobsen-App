@@ -23,13 +23,11 @@
 		256397B11F324B84000E1D04 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B01F324B84000E1D04 /* MenuItemCell.swift */; };
 		256397B51F325B02000E1D04 /* MenuHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */; };
 		256397B71F328163000E1D04 /* MenuSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397B61F328163000E1D04 /* MenuSplitViewController.swift */; };
-		256397B91F33C460000E1D04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256397B81F33C460000E1D04 /* GoogleService-Info.plist */; };
-		256397BA1F33C460000E1D04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256397B81F33C460000E1D04 /* GoogleService-Info.plist */; };
-		256397BB1F33C460000E1D04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256397B81F33C460000E1D04 /* GoogleService-Info.plist */; };
 		256397BD1F357BFB000E1D04 /* FirebaseDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */; };
 		256397BF1F36C447000E1D04 /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256397BE1F36C447000E1D04 /* AtomicInteger.swift */; };
 		25659A631F26D25A005CCB0B /* DetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */; };
 		25738B8A1F1F655B00C13DFE /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25738B891F1F655B00C13DFE /* Menu.swift */; };
+		25C1383A1F4C6F8C00594A5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25C138391F4C6F8C00594A5D /* GoogleService-Info.plist */; };
 		25D83FDA1F48BD4800F2FA55 /* MenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D83FD91F48BD4800F2FA55 /* MenuHeaderTableViewCell.swift */; };
 		25E2AE991F1C4C95001B558F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2AE981F1C4C95001B558F /* AppDelegate.swift */; };
 		25E2AE9E1F1C4C95001B558F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E2AE9C1F1C4C95001B558F /* Main.storyboard */; };
@@ -76,11 +74,11 @@
 		256397B01F324B84000E1D04 /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuHeaderReusableView.swift; path = ../MenuHeaderReusableView.swift; sourceTree = "<group>"; };
 		256397B61F328163000E1D04 /* MenuSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSplitViewController.swift; sourceTree = "<group>"; };
-		256397B81F33C460000E1D04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		256397BC1F357BFB000E1D04 /* FirebaseDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataObject.swift; sourceTree = "<group>"; };
 		256397BE1F36C447000E1D04 /* AtomicInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
 		25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewController.swift; sourceTree = "<group>"; };
 		25738B891F1F655B00C13DFE /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		25C138391F4C6F8C00594A5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25D83FD91F48BD4800F2FA55 /* MenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		25E2AE951F1C4C95001B558F /* Restaurant Jacobsen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Jacobsen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2AE981F1C4C95001B558F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,7 +227,7 @@
 				25E2AE9F1F1C4C95001B558F /* Assets.xcassets */,
 				25E2AEA11F1C4C95001B558F /* LaunchScreen.storyboard */,
 				25E2AEA41F1C4C95001B558F /* Info.plist */,
-				256397B81F33C460000E1D04 /* GoogleService-Info.plist */,
+				25C138391F4C6F8C00594A5D /* GoogleService-Info.plist */,
 			);
 			path = "Restaurant Jacobsen";
 			sourceTree = "<group>";
@@ -392,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E2AEA31F1C4C95001B558F /* LaunchScreen.storyboard in Resources */,
-				256397B91F33C460000E1D04 /* GoogleService-Info.plist in Resources */,
+				25C1383A1F4C6F8C00594A5D /* GoogleService-Info.plist in Resources */,
 				25E2AEA01F1C4C95001B558F /* Assets.xcassets in Resources */,
 				25E2AE9E1F1C4C95001B558F /* Main.storyboard in Resources */,
 			);
@@ -402,7 +400,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256397BA1F33C460000E1D04 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +407,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256397BB1F33C460000E1D04 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
