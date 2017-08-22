@@ -1024,7 +1024,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fGl-Ks-not" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find vej" id="gth-s6-xim"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="MIc-6s-3d4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="MIc-6s-3d4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1083,7 +1083,7 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
         <scene sceneID="FSD-5E-aUF">
             <objects>
                 <tableViewController id="OGo-4M-aFk" customClass="NewsTableViewController" customModule="Restaurant_Jacobsen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="z55-Yh-VSu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="z55-Yh-VSu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
@@ -1096,11 +1096,8 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbl-XG-4xV">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbl-XG-4xV">
                                             <rect key="frame" x="8" y="8" width="359" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="1lY-C2-lym"/>
-                                            </constraints>
                                             <attributedString key="attributedText">
                                                 <fragment content="Velkommen til vores nye app">
                                                     <attributes>
@@ -1112,11 +1109,8 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeQ-QL-ZkM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeQ-QL-ZkM">
                                             <rect key="frame" x="8" y="53" width="359" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="TqS-6k-3yM"/>
-                                            </constraints>
                                             <attributedString key="attributedText">
                                                 <fragment content="Vi har idag fået en ny app!">
                                                     <attributes>
@@ -1128,14 +1122,14 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-1L-cte">
-                                            <rect key="frame" x="8" y="98" width="359" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-1L-cte">
+                                            <rect key="frame" x="8" y="92.5" width="359" height="19"/>
                                             <attributedString key="attributedText">
-                                                <fragment content="19. September 2017">
+                                                <fragment content="2017-08-21">
                                                     <attributes>
                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="15" name="SnellRoundhand"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -1147,12 +1141,16 @@ Kryddersild, æg m/rejer, roastbeef, fiskefilet, svinemørbrad og mild ost</stri
                                         <constraint firstItem="Tbl-XG-4xV" firstAttribute="top" secondItem="NZp-ab-RHP" secondAttribute="topMargin" id="1VI-N9-bB7"/>
                                         <constraint firstItem="IeQ-QL-ZkM" firstAttribute="leading" secondItem="NZp-ab-RHP" secondAttribute="leadingMargin" id="2sw-dB-hgF"/>
                                         <constraint firstItem="5jH-1L-cte" firstAttribute="trailing" secondItem="NZp-ab-RHP" secondAttribute="trailingMargin" id="5yP-Eh-i6L"/>
-                                        <constraint firstItem="IeQ-QL-ZkM" firstAttribute="top" secondItem="Tbl-XG-4xV" secondAttribute="bottom" constant="24" id="5ye-Ow-tKG"/>
                                         <constraint firstItem="Tbl-XG-4xV" firstAttribute="leading" secondItem="NZp-ab-RHP" secondAttribute="leadingMargin" id="6b7-cr-og8"/>
                                         <constraint firstItem="IeQ-QL-ZkM" firstAttribute="trailing" secondItem="NZp-ab-RHP" secondAttribute="trailingMargin" id="Elo-Yy-pTh"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="5jH-1L-cte" secondAttribute="bottom" constant="-8" id="WUU-yh-sJm"/>
-                                        <constraint firstItem="5jH-1L-cte" firstAttribute="top" secondItem="IeQ-QL-ZkM" secondAttribute="bottom" constant="24" id="ZIf-QJ-Rfh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IeQ-QL-ZkM" secondAttribute="bottom" constant="37" id="Lw5-C6-RtR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5jH-1L-cte" secondAttribute="bottom" id="WUU-yh-sJm"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Tbl-XG-4xV" secondAttribute="bottom" constant="82" id="avj-SO-PQe"/>
                                         <constraint firstItem="5jH-1L-cte" firstAttribute="leading" secondItem="NZp-ab-RHP" secondAttribute="leadingMargin" id="dgs-LS-jHC"/>
+                                        <constraint firstItem="5jH-1L-cte" firstAttribute="top" secondItem="IeQ-QL-ZkM" secondAttribute="bottom" constant="18.5" id="g0w-Xz-iEa"/>
+                                        <constraint firstItem="IeQ-QL-ZkM" firstAttribute="top" secondItem="Tbl-XG-4xV" secondAttribute="bottom" constant="24" id="pAb-0d-9gK"/>
+                                        <constraint firstItem="IeQ-QL-ZkM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NZp-ab-RHP" secondAttribute="topMargin" constant="45" id="qOS-6F-p3l"/>
+                                        <constraint firstItem="5jH-1L-cte" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NZp-ab-RHP" secondAttribute="top" constant="92.5" id="zXj-bN-J5s"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>

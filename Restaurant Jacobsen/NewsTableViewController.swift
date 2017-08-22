@@ -9,16 +9,29 @@
 import UIKit
 import FirebaseDatabase
 
+private let reuseIdentifier = "NewsTableViewCell"
+
 class NewsTableViewController: UITableViewController, FirebaseDatabaseReference {
     
-    var news: News?
+    var news: [News] = []
     
     func downloadNews() {
+        let queryRef = ref.child("News")
         ref.child("News").observe(.value, with: { snapshot in
-            for (index, child) in snapshot.children.enumerated() {
-                
+            var newsArray: [News] = []
+            for (child) in snapshot.children {
+                let newsItem = News(snapshot: child as! DataSnapshot)
+                newsArray.append(newsItem)
             }
+            self.news = newsArray
+            self.refreshUI()
         })
+    }
+    
+    func refreshUI() {
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+        }
     }
 
     override func viewDidLoad() {
@@ -32,6 +45,8 @@ class NewsTableViewController: UITableViewController, FirebaseDatabaseReference 
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+        
+        downloadNews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,53 +61,21 @@ class NewsTableViewController: UITableViewController, FirebaseDatabaseReference 
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return news.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! NewsTableViewCell
 
-        // Configure the cell...
-
+        let newsItem = news[indexPath.item]
+        cell.titleLabel.text = newsItem.title
+        cell.contentLabel.text = newsItem.text
+        // TODO: ISOFORMAT DATE
+        cell.dateLabel.text = newsItem.date
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
