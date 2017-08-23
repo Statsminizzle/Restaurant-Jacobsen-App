@@ -29,8 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference
         
         masterViewController.delegate = detailTableViewController
         
-        downloadMenu()
-        
         // MARK: Color theme for app
         UIApplication.shared.statusBarStyle = .lightContent
         let navigationBarAppearance = UINavigationBar.appearance()
@@ -44,17 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference
         
         return true
     }
-    
-    func downloadMenu(){
-        var menu = Menu()
-        ref.child("MenuCategories").observe(.value, with: { snapshot in
-            for (index, child) in snapshot.children.enumerated() {
-                menu.menuCategories[index+1] = (Menu.Category.init(snapshot: child as! DataSnapshot))
-                print(menu.menuCategories[index+1]?.name ?? "doh")
-            }
-        })
-    }
-    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
