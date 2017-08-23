@@ -12,74 +12,37 @@ import FirebaseDatabase
 private let reuseIdentifier = "MenuTableViewCell"
 private let reuseHeaderIdentifier = "MenuHeaderTableViewCell"
 
+protocol getSectionDelegate {
+    func setSectionDelegate(menu: Menu, numberOfSections: Int)
+}
+
 
 class DetailTableViewController: UITableViewController, FirebaseDatabaseReference {
 
     var menu: Menu?
     var counter: AtomicInteger?
     var numberOfSections: Int = 0
+    var dal: DAL?
     
     var category: Menu.Category! {
         didSet {
+            
+            if menu == nil {
+                menu = Menu()
+                dal = DAL()
+                dal!.delegate = self
+            }
+            
             if oldValue != nil {
                 if category.name != oldValue.name {
                     refreshUI()
-                    downloadSections()
+                    dal?.downloadSections(category: category, menu: menu!)
                 }
             } else {
-                downloadSections()
+                    dal?.downloadSections(category: category, menu: menu!)
             }
         }
     }
-
-    func downloadSections(){
-        ref.child("MenuSections/" + "\(self.category.uid!)").observe(.value, with: { snapshot in
-            print("category uid: \(self.category.uid)")
-            print("ref url: \(snapshot.ref.url)")
-            self.numberOfSections = Int(snapshot.childrenCount)
-            print("number of sections: \(self.numberOfSections)" + " \(snapshot.childrenCount)")
-            self.counter = AtomicInteger()
-            for (index, child) in snapshot.children.enumerated() {
-                var sections = self.menu!.menuSections[self.category.name!]
-                let section = Menu.Section(snapshot: child as! DataSnapshot)
-                
-                if sections == nil {
-                    sections = [index+1: section ]
-                    self.menu!.menuSections[self.category.name!] = sections
-                } else {
-                    let merge = sections?.merge(with: [index+1: section])
-                    self.menu!.menuSections[self.category.name!] = merge
-                }
-                print("Section: \(section.name)")
-                self.downloadItemsForSection(section: section)
-            }
-            self.refreshUI()
-        })
-    }
-    
-    func downloadItemsForSection(section: Menu.Section) {
-        print("downloading items from section \(section.name)")
-        ref.child("MenuItems/" + "\(section.uid!)").observe(.value, with: { snapshot in
-            for (index, child) in snapshot.children.enumerated() {
-                var items = self.menu?.menuItems[section.name!]
-                let item = Menu.Item(snapshot: child as! DataSnapshot)
-                let key = index+1
-                
-                if items == nil {
-                    items = [key: item]
-                    self.menu!.menuItems[section.name!] = items
-                } else {
-                    let merge = items?.merge(with: [key: item])
-                    self.menu!.menuItems[section.name!] = merge
-                }
-                print("Item: \(item.name)")
-            }
-            if self.counter?.increment() == self.numberOfSections {
-                self.refreshUI()
-            }
-        })
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -210,5 +173,14 @@ extension DetailTableViewController: CategorySelectionDelegate {
     func categorySelected(newCategory: Menu.Category, menu: Menu) {
         category = newCategory
         self.menu = menu
+    }
+}
+
+extension DetailTableViewController: getSectionDelegate {
+    func setSectionDelegate(menu: Menu, numberOfSections: Int) {
+        print("setSelectionDelegate called")
+        self.menu = menu
+        self.numberOfSections = numberOfSections
+        self.refreshUI()
     }
 }

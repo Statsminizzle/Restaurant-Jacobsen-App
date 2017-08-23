@@ -13,11 +13,16 @@ protocol CategorySelectionDelegate: class {
     func categorySelected(newCategory: Menu.Category, menu: Menu)
 }
 
+protocol getCategoriesDelegate: class {
+    func setCategories(menu: Menu)
+}
+
 class MasterViewController: UITableViewController, FirebaseDatabaseReference {
     
     weak var delegate: CategorySelectionDelegate?
     var menu: Menu?
-
+    var dal: DAL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,19 +33,13 @@ class MasterViewController: UITableViewController, FirebaseDatabaseReference {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         if menu == nil {
             menu = Menu()
-            downloadCategories()
+            dal = DAL()
+            dal!.delegate = self
+            dal!.downloadCategories(menu: menu!)
         }
     }
     
-    func downloadCategories(){
-        ref.child("MenuCategories").observe(.value, with: { snapshot in
-            for (index, child) in snapshot.children.enumerated() {
-                self.menu!.menuCategories[index+1] = (Menu.Category.init(snapshot: child as! DataSnapshot))
-                print(self.menu!.menuCategories[index+1]?.name ?? "doh")
-            }
-            self.refreshUI()
-        })
-    }
+    
     
     func refreshUI() {
         DispatchQueue.main.async {
@@ -130,4 +129,11 @@ class MasterViewController: UITableViewController, FirebaseDatabaseReference {
     }
     */
 
+}
+
+extension MasterViewController: getCategoriesDelegate {
+    func setCategories(menu: Menu) {
+        self.menu = menu
+        self.refreshUI()
+    }
 }

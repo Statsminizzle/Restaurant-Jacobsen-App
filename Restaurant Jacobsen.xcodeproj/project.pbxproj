@@ -137,9 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				25317C971F1DDBF600C549E1 /* MasterViewController.swift */,
-				25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */,
-				256397B01F324B84000E1D04 /* MenuItemCell.swift */,
-				256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */,
+				2507CFD31F4D3DCD00D9D20B /* Unused */,
 				256397B61F328163000E1D04 /* MenuSplitViewController.swift */,
 				2504FE1B1F481804002334B0 /* MenuTableViewCell.swift */,
 				2504FE1D1F483256002334B0 /* DetailTableViewController.swift */,
@@ -185,6 +183,16 @@
 				25C1383D1F4CF18000594A5D /* DAL.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2507CFD31F4D3DCD00D9D20B /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				25659A621F26D25A005CCB0B /* DetailCollectionViewController.swift */,
+				256397B01F324B84000E1D04 /* MenuItemCell.swift */,
+				256397B41F325B02000E1D04 /* MenuHeaderReusableView.swift */,
+			);
+			name = Unused;
 			sourceTree = "<group>";
 		};
 		25278B911F4A7028000506B7 /* Nyheder tab */ = {

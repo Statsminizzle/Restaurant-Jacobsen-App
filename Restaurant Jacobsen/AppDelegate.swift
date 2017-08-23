@@ -29,10 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseDatabaseReference
         
         masterViewController.delegate = detailTableViewController
         
-        /*let detailCollectionViewController = splitViewController.viewControllers.last as! DetailCollectionViewController
-        
-        masterViewController.delegate = detailCollectionViewController
-        */
         downloadMenu()
         
         // MARK: Color theme for app
