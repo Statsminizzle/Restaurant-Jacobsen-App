@@ -27,6 +27,8 @@ class ReservationDetailViewController: UIViewController, FirebaseDatabaseReferen
     var reservation: Reservation?
     var redColor: UIColor?
     
+    let dal = DAL()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,16 +54,11 @@ class ReservationDetailViewController: UIViewController, FirebaseDatabaseReferen
     func confirmReservation(sender: UIButton) {
         let contact = Reservation.Contact(name: nameTextField.text!, email: emailTextField.text!, phone: phoneTextField.text!, comment: commentTextField.text!, birthday: birthdaySwitch.isOn)
         reservation?.contact = contact
-        saveReservation()
+        dal.saveReservation(reservation: reservation!)
         let confirmation = UIAlertController.init(title: "Success", message: "Din reservation er modtaget", preferredStyle: .alert)
         confirmation.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
         self.present(confirmation, animated: true, completion: nil)
     }
-    
-    func saveReservation() {
-        ref.child("reservations").childByAutoId().setValue(reservation!.toDictionary())
-    }
-    
 
     /*
     // MARK: - Navigation

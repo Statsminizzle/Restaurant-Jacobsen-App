@@ -77,10 +77,6 @@ class MasterViewController: UITableViewController, FirebaseDatabaseReference {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCategory = menu?.menuCategories[indexPath.row+1]
         self.delegate?.categorySelected(newCategory: selectedCategory!, menu: menu!)
-        /*
-        if let detailCollectionViewController = self.delegate as? DetailCollectionViewController {
-            splitViewController?.showDetailViewController(detailCollectionViewController, sender: nil)
-        }*/
         
         if let detailTableViewController = self.delegate as? DetailTableViewController {
             

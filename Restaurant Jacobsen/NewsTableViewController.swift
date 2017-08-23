@@ -11,22 +11,14 @@ import FirebaseDatabase
 
 private let reuseIdentifier = "NewsTableViewCell"
 
+protocol downloadNewsDelegate: class {
+    func newsDownloaded(news: [News])
+}
+
 class NewsTableViewController: UITableViewController, FirebaseDatabaseReference {
     
     var news: [News] = []
-    
-    func downloadNews() {
-        let queryRef = ref.child("News")
-        ref.child("News").observe(.value, with: { snapshot in
-            var newsArray: [News] = []
-            for (child) in snapshot.children {
-                let newsItem = News(snapshot: child as! DataSnapshot)
-                newsArray.append(newsItem)
-            }
-            self.news = newsArray
-            self.refreshUI()
-        })
-    }
+    var dal: DAL?
     
     func refreshUI() {
         DispatchQueue.main.async {
@@ -46,7 +38,9 @@ class NewsTableViewController: UITableViewController, FirebaseDatabaseReference 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         
-        downloadNews()
+        dal = DAL()
+        dal!.delegate = self
+        dal!.downloadNews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,4 +81,12 @@ class NewsTableViewController: UITableViewController, FirebaseDatabaseReference 
     }
     */
 
+}
+
+extension NewsTableViewController: downloadNewsDelegate {
+    func newsDownloaded(news: [News]) {
+        self.news = news
+        self.refreshUI()
+        dal = nil
+    }
 }

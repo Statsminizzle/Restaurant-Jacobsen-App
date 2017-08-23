@@ -12,8 +12,8 @@ import MapKit
 class NavigationViewController: UIViewController {
 
     @IBAction func FindWayBtn(_ sender: Any) {
-        let lattitude:CLLocationDegrees  = 129.22
-        let longitude:CLLocationDegrees = 80.00
+        let lattitude:CLLocationDegrees  = 55.682505
+        let longitude:CLLocationDegrees = 12.574030
         
         let regionDistance:CLLocationDistance = 1000
         let coordinates = CLLocationCoordinate2DMake(lattitude,longitude)
